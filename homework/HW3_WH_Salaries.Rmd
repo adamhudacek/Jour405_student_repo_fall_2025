@@ -9,6 +9,7 @@ In this assignment, we will be working with a dataset containing information abo
 You will need to load the tidyverse library
 
 ```{r}
+library(tidyverse)
 ```
 
 Then you'll load the data from the web. The URL for the data is: https://raw.githubusercontent.com/dwillis/jour405/refs/heads/main/data/biden_wh_salaries_2024.csv. You will create a dataframe called `wh_salaries` that contains the data from this URL.
@@ -16,18 +17,24 @@ Then you'll load the data from the web. The URL for the data is: https://raw.git
 ### Task 2: Load the Data and Describe It
 
 ```{r}
+wh_salaries <- read_csv(url("https://raw.githubusercontent.com/dwillis/jour405/refs/heads/main/data/biden_wh_salaries_2024.csv"))
 ```
 ### Task 3: Describe the Data
 
 You should examine that dataframe carefully by clicking on it in the Environment tab in RStudio. Write a couple of sentences describing the categories of incidents. From a reporting standpoint, what stands out to you about this data? Are there any salary values that will cause problems for analysis?
 
-ANSWER HERE
+ANSWER HERE: The categories indicate a worker's name, their status--employee or detailee--along with their salary and position title. Some employees appear to make no wage at all, zero dollars, which will throw off the mean of the distribution. I do wish there was an additional column stating which department or office each title belongs to. 
 
 ### Task 4: Calculate the Mean and Median of the Salaries
 
 Write code to calculate the mean and median of the salaries in the dataset using the `summarize()` function. You don't need to make a new dataframe, just display the results.
 
 ```{r}
+wh_salaries |>
+  summarise(
+    mean_salary = mean(salary),
+    median_salary = median(salary)
+  )
 
 ```
 
@@ -37,16 +44,25 @@ Take the code you just wrote and add in the minimum and maximum salaries (the fu
 
 ```{r}
 
+wh_salaries |>
+  summarise(
+    mean_salary = mean(salary),
+    median_salary = median(salary),
+    max_salary = max(salary),
+    min_salary = min(salary)
+  )
+            
+
 ```
 
 ### Task 6: Describe the Results
 
 Write a couple of sentences describing the results of your analysis. What do the mean and median salaries tell you about the data? What do the minimum and maximum salaries tell you? Are there any outliers in the data?
 
-ANSWER HERE
+ANSWER HERE: Outliers seem to exist within the data, as multiple employees make zero wage, which drags both the mean and the median, but especially the mean, lower than it is among employees making a real salary. The mean and median are relatively similar, which indicates that the data has a mostly symmetrical distribution, likely offset by the zero-wage employees. 
 
 ### Task 7: Story Idea
 
 Based on the data, what is your best story idea? What is the next step you would take to develop that story idea?
 
-ANSWER HERE
+ANSWER HERE: I'm intrigued by the White House employees who seemingly work for free. I'd like to find out how many there are/what percent they make up of all White House staff, and I would do through a group_by(), summarise(), arrange() function combination. I would also use filter() to create a new dataset of only no-wage employees, so I could look into what positions they occupy without pouring over the entire dataset. 
