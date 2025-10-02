@@ -58,21 +58,31 @@ mm_data |>
   geom_histogram(aes(x = red), binwidth = 5) +
   geom_vline(aes(xintercept = mean(red)), color = "red", linetype = "dashed", size = 1) +
   geom_vline(aes(xintercept = mean(red) - sd(red)), color = "blue", linetype = "dashed", size = 1) +
-  geom_vline(aes(xintercept = mean(red) + sd(red)), color = "blue", linetype = "dashed", size = 1)
+  geom_vline(aes(xintercept = mean(red) + sd(red)), color = "blue", linetype = "dashed", size = 1) +
+  ggtitle("Histogram of Total Red M&M Population") +
+  xlab("Number of Red M&Ms") +
+  ylab("Number of Instances")
 
 sample5 |> 
   ggplot() + 
   geom_histogram(aes(x = red), binwidth = 5) +
   geom_vline(aes(xintercept = mean(red)), color = "red", linetype = "dashed", size = 1) +
   geom_vline(aes(xintercept = mean(red) - sd(red)), color = "blue", linetype = "dashed", size = 1) +
-  geom_vline(aes(xintercept = mean(red) + sd(red)), color = "blue", linetype = "dashed", size = 1)
+  geom_vline(aes(xintercept = mean(red) + sd(red)), color = "blue", linetype = "dashed", size = 1) +
+   ggtitle("Histogram of Red M&M Population in Sample5") +
+  xlab("Number of Red M&Ms") +
+  ylab("Number of Instances")
+
 
 sample10 |> 
   ggplot() + 
   geom_histogram(aes(x = red), binwidth = 5) +
   geom_vline(aes(xintercept = mean(red)), color = "red", linetype = "dashed", size = 1) +
   geom_vline(aes(xintercept = mean(red) - sd(red)), color = "blue", linetype = "dashed", size = 1) +
-  geom_vline(aes(xintercept = mean(red) + sd(red)), color = "blue", linetype = "dashed", size = 1)
+  geom_vline(aes(xintercept = mean(red) + sd(red)), color = "blue", linetype = "dashed", size = 1) +
+     ggtitle("Histogram of Red M&M Population in Sample10") +
+  xlab("Number of Red M&Ms") +
+  ylab("Number of Instances")
 
 ```
 
