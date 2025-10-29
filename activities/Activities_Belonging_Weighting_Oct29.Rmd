@@ -261,4 +261,4 @@ comparison
 
 2. How might these differences affect reporting on likely voter turnout? **Write your answer here:** There would likely be no change to the reporting on likely voter turnout, as the always, and the sporadic, data showed no significant change between weighted and unweighted analyses. Always showed the least change of any category.
 
-3. Why do you think these differences exist? What does this tell us about who might be over or under-represented in the sample? **Write your answer here:** Rarely/never voters who are not planning on voting in the upcoming election were slightly underrepresented in the data, which makes sense, since less civically engaged individuals are also likely to be less engaged with polling efforts. 
+3. Why do you think these differences exist? What does this tell us about who might be over or under-represented in the sample? **Write your answer here:** Rarely/never voters who are not unlikely to vote in the upcoming election were slightly underrepresented in the data, which makes sense, since less civically engaged individuals are also likely to be less engaged with polling efforts. 
