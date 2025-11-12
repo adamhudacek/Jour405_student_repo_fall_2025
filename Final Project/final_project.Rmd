@@ -1,0 +1,48 @@
+---
+title: "Final Project"
+author: "Adam Hudacek"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
+```
+
+```{r}
+library(tidyverse)
+```
+
+```{r}
+#Import CSV
+billboard <- read_csv("Billboard.csv") 
+
+#Clean Names
+billboard <- billboard |>
+  clean_names()
+
+#Examine Data and Data Types
+glimpse(billboard)
+
+```
+
+Overview: 
+This dataframe contains every song that hit No. 1 on the Billboard Hot 100 from August 4, 1958 to January 11, 2025. For each song, there is a plethora of data points, ranging from a song's production to its genres to its critical reception. For my analysis, a song's overall critical receptions and weeks at the top spot on the charts will be most salient. What we don't have are the publications or critics whose scores and opinions form the critical consensus for each song, or information on whether those publications have changed or remained constant over time. This could impact any drawn conclusions.  
+
+Question: 
+Does a Number 1 hit song's critical reception, or "Overall Rating," impact its longevity at the top position on the Billboard charts?
+
+Alternative Hypothesis: 
+Number 1 songs with higher overall ratings are more likely to have longer runs at the top position of the Billboard chart.
+
+Null Hypothesis: 
+A Number 1 song's overall rating does not impact its longevity on the top position of the Billboard chart.
+
+```{r}
+#For this question, we'll need to examine the "Overall Rating" and "Weeks at Number One" columns. 
+
+#Summary Statistics of Overall Rating
+summary(billboard$overall_rating)
+
+#Summary Statistics of Weeks at Number One
+summary(billboard$weeks_at_number_one)
+```
+
