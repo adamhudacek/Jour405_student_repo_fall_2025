@@ -72,6 +72,9 @@ d) State the null and alternative hypotheses, report the p-value, and state your
 
 
 **Answer:**
-
+a) The independent variable is the number of beers and the dependent variable is the blood alcohol content. 
+b) The regression model is asking whether there is a statistically significant relationship between the two variables. The resulting p-value shows that there is, since it is less than 0.05. 
+c) Yes, the data provides strong evidence that drinking more cans of beer is associated with an increase in blood alcohol level. 
+d) The null hypothesis is that drinking any amount of beer does not affect someone's blood alcohol content. The alternative hypothesis is that drinking more beer increases someone's blood alcohol content. The p-value from our regression model was 0.0005239, well below 0.05, which means there is a statistically significant relationship between drinking beer and blood alcohol level, although the adjusted R-squared value of 0.5591 indicates that the number of beers someone drinks isn't the only predictor of their blood alcohol content.
 
 
